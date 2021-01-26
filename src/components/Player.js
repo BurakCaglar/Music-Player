@@ -53,7 +53,12 @@ const Player = ({
         <p>{getTime(songInfo.duration)}</p>
       </div>
       <div className="play-control">
-        <FontAwesomeIcon className="skip-back" size="2x" icon={faAngleLeft} />
+        <FontAwesomeIcon
+          onClick={() => skipTrackHandler("skip-back")}
+          className="skip-back"
+          size="2x"
+          icon={faAngleLeft}
+        />
         <FontAwesomeIcon
           onClick={playSongHandler}
           className="play"
@@ -64,6 +69,7 @@ const Player = ({
           className="skip-forward"
           size="2x"
           icon={faAngleRight}
+          onClick={() => skipTrackHandler("skip-back")}
         />
       </div>
     </div>
